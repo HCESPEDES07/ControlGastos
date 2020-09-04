@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+ 
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">APP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item active">
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Default.aspx"> Inicio </asp:HyperLink>
+      </li>
+
+      <li class="nav-item">
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Usuario/ListaUsuarios.aspx"> Usuarios </asp:HyperLink>
+    
+      </li>
+
+        <li class="nav-item">
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Paginas/Cuentas/ListaCuentas.aspx"> Cuentas </asp:HyperLink>
+    
+      </li>
+
+
+     <li class="nav-item">
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Conceptos/Gastos.aspx"> Conceptos de Gatos </asp:HyperLink>
+    
+      </li>
+
+
+    <li class="nav-item">
+
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Conceptos/Ingresos.aspx"> Conceptos de Ingresos </asp:HyperLink>
+    
+    </li>
+
+     <li class="nav-item">
+
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Transacciones/Gastos.aspx"> Reporte  Egresos </asp:HyperLink>
+    
+    </li>
+
+
+        <li class="nav-item">
+
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Transacciones/Ingresos.aspx">Reporte Ingresos </asp:HyperLink>
+    
+    </li>
+
+        <li class="nav-item">
+
+        <asp:HyperLink runat="server" Cssclass="nav-link" NavigateUrl="~/Transacciones/Traspasos.aspx"> Ventas </asp:HyperLink>
+    
+    </li>
+
+
+         <li class="nav-item">
+          <asp:LinkButton ID="BtnSalir" runat="server" Cssclass="nav-link" OnClick="BtnSalir_Click"> Salir </asp:LinkButton>
+    
+      </li>
+
+
+    </ul>
+    
+  </div>
+</nav>
+           <div class="container">
+        <asp:ContentPlaceHolder ID="content" runat="server">
+        
+        </asp:ContentPlaceHolder>
+     </div>
+    </form>
+</body>
+</html>
